@@ -10,8 +10,7 @@ const PORT = 8080;
 // GET - / - returns homepage
 app.get('/', (req, res) => {
     // serve up the public folder as static index.html file
-    const publicFolder = './public/index.html';
-    app.use(express.static(publicFolder));
+    app.use(express.static('./public'));
     res.send('Homepage');
     
 });
